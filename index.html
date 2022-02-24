@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8"/>
-    <title>CSS 基礎語法</title>
-    <style type="text/css">
-    .title{font-weight:bold;font-size:24px}
-    .content{width:400px;padding:10px;border:1px dashed blue;margin-top:10px;margin-bottom:10px}
-    .keyword{color:red}
-    .box{
-        position:relative;left:200px;top:50px;
-        width:100px;height:100px;background-color:green
-    }
-    </style>
-</head>
-<body>
-    <div class="title">今天天氣不錯</div>
-    <div class="content">
-           我去公園散步，餵<span class="keyword">鴿子</span>。<br/>
-           覺得鴿子好可愛喔。
-    </div>
-    
-    <div class="title">公園裡有很多小朋友</div>
-    <div class="content">
-           小朋友在玩溜滑梯，盪鞦韆，還有幾隻<span class="keyword">狗狗</span>和貓貓。
-    </div>
-    <div class="content">
-           還有幾位老公公<span style="position:relative;top:-8px">2</span>在聊天。
-    </div>
-</body>
+  <head>
+    <meta charset="utf-8">
+	<title>CSS 選擇器 - 詳細介紹</title>
+	<style type="text/css">
+	/* 標籤名稱選擇器 */
+	body{
+		font-size:16px;
+	}		
+	h3{
+		font-size:24px;text-decoration:underline;
+	}
+	/* class 選擇器(可以結合標籤名稱選擇器) */
+	div.content{
+		padding:10px;border:1px dashed #888888;
+	}	
+	/* id 選擇器 */
+	#btn{
+		border:1px solid #888888;
+		background-color:#ffffff;padding:5px;
+	}
+	/* 虛擬選擇器:搭配其他選擇器使用 */
+	/* :hover 虛擬選擇器:滑鼠移到目標上時，套用一組設定 */
+	#btn:hover{
+		background-color:#888888;
+	}
+	/* :focus 虛擬選擇器：當目標取得焦點時，套用一組設定 */
+	input:focus{
+		border:2px solid #ff0000;
+	}
+	/* 階層式選擇器:搭配其他選擇器使用 */
+	.favorite a{
+		color:#0000ff;
+	}
+	.demo a{
+		color:#008800;
+	}
+	</style>
+  </head>
+	
+  <body>
+    <h3>我的自我介紹</h3>
+	<div class="content">
+		大家好，我是竣奇。
+	</div>
+	<h3>我的最愛連結</h3>
+	<ul class="favorite">
+		<li><a href="https://www.google.com/">Google</a></li>
+		<li><a href="https://www.facebook.com/">Facebook</a></li>
+	</ul>
+	<h3>我的作品</h3>
+	<ul class="demo">
+		<li><a href="https://junqihou.ml">竣奇的個人網站</a></li>
+		<li><a href="https://junqi.ml">我的部落格</a></li>
+	</ul>
+	<h3>與我聯絡</h3>
+	<div class="content">
+		填寫訊息 <input type="text"/> <button id="btn">送出</button>
+	</div>
+  </body>
 </html>
