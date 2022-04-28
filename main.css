@@ -1,36 +1,45 @@
 body{margin:5px;}
+h1{
+    font-size:25px
+}
 /* nav 樣式設定 */
 nav{
 	display:flex;
     align-items: stretch;
+    background-color:#0df491;
 }
 nav>.logo{
 	/* 沒有彈性，固定尺寸 */
 	display:inline-flex;
     flex-wrap:nowrap;
-    padding:10px;
+    padding:12px;
 	background-color:#2bd3ac;
+    cursor: pointer;
     
 }
 nav>.menu{
 	/* 盡量把容器的空間張滿 */	
 	flex:auto;
-	background-color:#73efba;
+	background-color:#0df491;
     padding:10px;
     flex-wrap:nowrap;
-    justify-content: center;
+    align-self:center;
 }
 
 nav>.menu>button{
-    border:0; background-color:none;
+    border:0; background-color:white;
     width:100px;height:50px;
+    font-size: 20px;
+    cursor: pointer;
 }
+
+
 nav>.user{
 	flex:none;width:100px;
-    align-content: stretch;    
     text-align: center;
 	background-color:#90c390;
     padding:10px;
+    cursor: pointer;
 }
 /* main 樣式設定 */
 main{ /* 容器 */
