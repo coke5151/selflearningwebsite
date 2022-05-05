@@ -5,31 +5,16 @@
         <title>樹（いつき）的金融學堂</title>
         <link rel="icon" href="/favicon.svg" type="image/x-icon" />
         <link rel="stylesheet" href="main.css" />
+        <script src="jquery-3.6.0.min.js"></script>
     </head>
     <body>
         <script type="text/javascript" src="/main.js"></script>
-            
-        <nav>
-            <div class="logo">
-                <img src="/favicon.svg" width="50" onclick="homepg()"/>
-                <h1 onclick="homepg()">
-                    いつき 的金融學堂
-                </h1>
-            </div>
-            <div class="menu">
-                <button onclick="homepg()">
-                    首頁
-                </button>                
-                <button onclick="diary()">
-                    日誌
-                </button>
-            </div>
-            <div class="user" onclick="about()">
-                <h1>關於我</h1>
-            </div>            
-        </nav>
+        
+        <div class="header"></div>
+        <script>$(".header").load("header.html");</script>
+        
         <main>
-            <h1>About me</h1>
+            <H1>ABOUT</H1>
         </main>
     </body>
 </html>
